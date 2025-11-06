@@ -5,17 +5,17 @@
 \begin{document}
 \begin{tikzpicture}[scale=2,>=Stealth]
 
-    % 定义节点位置
+    % Define node positions
     \foreach \x in {0,1,2} {
             \foreach \y in {0,1,2} {
                     \node[circle,fill=black,minimum size=6pt,inner sep=0pt] (n\x\y) at (\x,\y) {};
                 }
         }
 
-    % 中心绿色节点
+    % Central green node
     \node[circle,fill=green!60!black,minimum size=6pt,inner sep=0pt] (center) at (1,1) {};
 
-    % 八个方向的短箭头（半透明）
+    % Eight short arrows in all directions (semi-transparent)
     \foreach \dx/\dy in {-1/0,1/0,0/-1,0/1,-1/-1,1/-1,-1/1,1/1} {
             \draw[gray,->,line width=3pt] (center) -- ++(\dx,\dy);
         }
@@ -44,7 +44,7 @@
     \node[red,anchor=south west] at (2,1) {2};
     \node[red,anchor=south west] at (2,2) {5};
 
-    % 底部普通字体 D2Q9
+    % Bottom label: D2Q9
     \node[font=\Large] at (1,-0.6) {D2Q9};
 
 \end{tikzpicture}
